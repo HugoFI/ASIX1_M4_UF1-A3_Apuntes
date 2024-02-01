@@ -3,19 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css" type="text/css">
+    <!--El orden de lectura de los estilos css empieza con el documento externo, despues en el head y por ultimo en linea. Tendrá prioridad el ultimo que lea, es decir el orden de mas a menos importante es; primero el linea, luego en el head y por ultimo externo.-->
+    <!--La prioridad en 'style': empieza a leer desde arriba, asi que si se ponen etiquetas mas abajo se aplicaran sobre las de mas arriba-->
+        <!--Si ponemos un asterisco'*' estariamos seleccionando todas las etiquetas que hay, para aplicarle un estilo-->
+    <!--RGB, de 0 a 255 en los tres, cuanto color rojo, verde y azul tiene para que salga ese color-->
+        <!--Por ejemplo para que sea completamente azul hay que poner el azul al maximo y el verde y rojo en nada, 0.-->
+        <!--Otra manera es con exadecimal, segun los numeros y letras se vera afectado el color-->
+    <style>
+        #primerafila{
+            color: rgb(255, 0, 0);
+        }
+        .textoAzul{
+            color: #0000ff;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
-    <table border="1px">
+    <table border="1" ><!--Table es el selector. En las declaraciones se deben hacer de esta manera: declaracion:atributo; -->
+        <!--Los estilos de 'style', se aplican a todo lo que haya dentro de la etiqueta en la que se aplica, para las etiquetas que hereda tambien.-->
+        <!--Por ejemplo si ponemos en 'table', se aplica a toda la tabla, en cambio si es en una linea, 'tr' se aplica a esa linea solamente, hasta donde la etiqueta cierra.-->
         <thead>
-            <tr>
+            <tr id="primerafila" style="text-align: center;">
                 <th>Puesto</th>
                 <th>Atleta</th>
                 <th>Tiempo</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr calss="textoAzul">
+                <!--Una clase es como in id pero que sirve para identificar mas de una cosa, para agrupar caracteristicas-->
                 <td>1r</td>
                 <td>Alejandro Pérez</td>
                 <td>2:01:15</td>
@@ -25,7 +43,7 @@
                 <td>Torcuato García</td>
                 <td>2:12:10</td>
             </tr>
-            <tr>
+            <tr class="textoAzul">
                 <td>3r</td>
                 <td>Weneslao Durán</td>
                 <td>2:13:20</td>
